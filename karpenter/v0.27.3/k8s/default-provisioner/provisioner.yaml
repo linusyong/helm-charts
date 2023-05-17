@@ -11,7 +11,7 @@ spec:
       values:
         - t3.medium
     - key: kubernetes.io/os
-	    operator: In
+      operator: In
       values:
         - linux
     - key: kubernetes.io/arch
