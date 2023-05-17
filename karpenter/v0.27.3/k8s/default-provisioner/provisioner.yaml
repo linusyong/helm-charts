@@ -11,7 +11,7 @@ spec:
       values:
         - m6a.xlarge
     - key: kubernetes.io/os
-	    operator: In
+      operator: In
       values:
         - linux
     - key: kubernetes.io/arch
