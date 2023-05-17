@@ -4,12 +4,13 @@ metadata:
   name: default
   namespace: karpenter
 spec:
-  ttlSecondsAfterEmpty: 60
+  providerRef:
+    name: default
   requirements:
     - key: node.kubernetes.io/instance-type
       operator: In
       values:
-        - m6a.xlarge
+        - t3a.medium
     - key: kubernetes.io/os
       operator: In
       values:
@@ -24,5 +25,9 @@ spec:
         - spot
   labels:
     managed-by: karpenter
-  providerRef:
-    name: default
+  kubeletConfiguration:
+      maxPods: 20
+  consolidation:
+    enabled: true
+  ttlSecondsUntilExpired: 2592000 
+  ttlSecondsAfterEmpty: 30
