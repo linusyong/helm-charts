@@ -1,0 +1,10 @@
+apiVersion: karpenter.k8s.aws/v1alpha1
+kind: AWSNodeTemplate
+metadata:
+  name: default
+  namespace: karpenter
+spec:
+  subnetSelector:
+    kubernetes.io/cluster/linus-sandbox-eks-cluster: shared
+  securityGroupSelector:
+    Name: "eks-cluster-sg-linus-sandbox-eks-cluster*"
