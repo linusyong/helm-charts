@@ -5,6 +5,6 @@ metadata:
   namespace: karpenter
 spec:
   subnetSelector:
-    kubernetes.io/cluster/linus-sandbox-eks-cluster: shared
+    Name: "linus-sandbox-eks-private-sg"
   securityGroupSelector:
     Name: "eks-cluster-sg-linus-sandbox-eks-cluster*"
