@@ -25,8 +25,6 @@ spec:
         - spot
   labels:
     managed-by: karpenter
-  kubeletConfiguration:
-      maxPods: 20
   consolidation:
     enabled: true
   ttlSecondsAfterEmpty: 30
