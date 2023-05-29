@@ -27,4 +27,4 @@ spec:
     managed-by: karpenter
   consolidation:
     enabled: true
-  ttlSecondsAfterEmpty: 30
+  ttlSecondsUntilExpired: 86400
